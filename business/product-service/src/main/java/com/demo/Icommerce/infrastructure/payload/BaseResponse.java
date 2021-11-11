@@ -5,5 +5,5 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BaseResponse {
+public class BaseResponse extends BaseObject {
 }
