@@ -22,4 +22,8 @@ public class PageRequest extends BaseObject {
     public org.springframework.data.domain.PageRequest toPageRequest() {
         return org.springframework.data.domain.PageRequest.of(page, size);
     }
+
+    public int getFirstResult() {
+        return this.page * this.size;
+    }
 }

@@ -1,7 +1,7 @@
 package com.demo.Icommerce.domain.product.service.impl;
 
 import com.demo.Icommerce.domain.product.payload.ProductFilter;
-import com.demo.Icommerce.domain.product.payload.ProductResponse;
+import com.demo.Icommerce.domain.product.payload.ProductPageResponse;
 import com.demo.Icommerce.domain.product.repository.ProductRepository;
 import com.demo.Icommerce.domain.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public List<ProductResponse> find(ProductFilter filter) {
+    public List<ProductPageResponse> find(ProductFilter filter) {
         return null;
     }
 }
