@@ -4,16 +4,15 @@ import com.demo.Icommerce.domain.product.entity.Category;
 import com.demo.Icommerce.domain.product.entity.Product;
 import com.demo.Icommerce.domain.product.repository.CategoryRepository;
 import com.demo.Icommerce.domain.product.repository.ProductRepository;
+import com.demo.Icommerce.infrastructure.util.DateTimeUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @SpringBootTest
 class IcommerceApplicationTests {
@@ -31,18 +30,31 @@ class IcommerceApplicationTests {
 	}
 
 	@Test
+	public void find(){
+		System.out.println(productRepository.findAll());
+	}
+
+	@Test
 	public void createOne() {
 		Category category = new Category();
-		category.setName("Category - name 1");
-		category.getProduct().add(new Product("name1", new BigDecimal(1000)));
-		category.getProduct().add(new Product("name2", new BigDecimal(2000)));
-		category.getProduct().add(new Product("name3", new BigDecimal(3000)));
-		category.getProduct().add(new Product("name4", new BigDecimal(4000)));
-
+		category.setName("Clothing");
+		category.setCreatedAt(DateTimeUtils.nowAsMillis());
+		category.setCreatedBy(-1L);
+		category.setProduct(IntStream.rangeClosed(1,10)
+		.mapToObj(el -> {
+			Product product = new Product();
+			product.setName("Hoddies");
+			product.setPrice(new BigDecimal(el * 25));
+			product.setBranch("branch-"+el);
+			product.setDescription("Description - " + el);
+			product.setCreatedAt(DateTimeUtils.nowAsMillis());
+			product.setCreatedBy(-1L);
+			product.setCategory(category);
+			return product;
+		})
+				.collect(Collectors.toList())
+		);
 		categoryRepository.save(category);
-
-		System.out.println(categoryRepository.findAll());
-		System.out.println(productRepository.findAll());
 	}
 
 }

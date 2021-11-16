@@ -21,7 +21,7 @@ public class ProductRepositoryImpl implements ProductRepositoryCustom<ProductPag
 
     @Override
     public ProductPageResponse find(ProductPageRequest productPageRequest) {
-        StringBuilder condition = new StringBuilder("WHERE p.deleted <> TRUE");
+        StringBuilder condition = new StringBuilder("WHERE p.deleted <> TRUE ");
         Map<String, Object> params = new HashMap<>();
 
         if (StringUtils.hasText(productPageRequest.getCategory())) {
@@ -63,7 +63,6 @@ public class ProductRepositoryImpl implements ProductRepositoryCustom<ProductPag
     private long getTotalResult(StringBuilder condition, Map<String, Object> params) {
         Query totalQuery = entityManager.createQuery("SELECT COUNT(p.productId) FROM Product p " + condition);
         params.forEach((k, v) -> totalQuery.setParameter(k, v));
-        long count = (long) totalQuery.getSingleResult();
-        return 0;
+        return (long) totalQuery.getSingleResult();
     }
 }

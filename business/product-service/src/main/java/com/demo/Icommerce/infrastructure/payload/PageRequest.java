@@ -1,8 +1,11 @@
 package com.demo.Icommerce.infrastructure.payload;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -23,7 +26,14 @@ public class PageRequest extends BaseObject {
         return org.springframework.data.domain.PageRequest.of(page, size);
     }
 
+    @JsonIgnore
     public int getFirstResult() {
+        if (Objects.isNull(this.page)) {
+            this.page = 1;
+        }
+        if (Objects.isNull(this.size)) {
+            this.size = 100;
+        }
         return this.page * this.size;
     }
 }
