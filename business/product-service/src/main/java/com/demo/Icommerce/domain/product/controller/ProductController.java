@@ -2,10 +2,12 @@ package com.demo.Icommerce.domain.product.controller;
 
 import com.demo.Icommerce.domain.product.payload.ProductPageRequest;
 import com.demo.Icommerce.domain.product.payload.ProductPageResponse;
+import com.demo.Icommerce.domain.product.payload.ProductResponse;
 import com.demo.Icommerce.domain.product.service.ProductService;
 import com.demo.Icommerce.infrastructure.logger.IcommerceLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,9 +19,13 @@ public class ProductController {
 
     @GetMapping("/find")
     public ProductPageResponse findProducts(ProductPageRequest productPageRequest) {
-//        ProductPageRequest productPageRequest = new ProductPageRequest();
         IcommerceLogger.logger.info("[ProductController] filter: " + productPageRequest);
         return productService.find(productPageRequest);
+    }
 
+    @GetMapping("/find/{id}")
+    public ProductResponse findDetail(@PathVariable Long id) {
+        IcommerceLogger.logger.info("[ProductController] filter: " + id);
+        return productService.findDetail(id);
     }
 }

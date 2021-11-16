@@ -1,5 +1,6 @@
 package com.demo.Icommerce.domain.product.payload;
 
+import com.demo.Icommerce.domain.product.converter.ProductConverter;
 import com.demo.Icommerce.domain.product.entity.Product;
 import com.demo.Icommerce.infrastructure.payload.BasePageResponse;
 import lombok.Getter;
@@ -22,15 +23,7 @@ public class ProductPageResponse extends BasePageResponse<Product, ProductRespon
     @Override
     public void parse(List<Product> products) {
         this.setDetails(products.stream()
-        .map(el -> {
-            // TODO: Should create and use a converter function.
-            ProductResponse res = new ProductResponse();
-            res.setCategory(el.getCategory().getName());
-            res.setDescription(el.getDescription());
-            res.setName(el.getName());
-            res.setPrice(el.getPrice());
-            return res;
-        })
+                .map(el -> ProductConverter.toResponse().apply(el))
                 .collect(Collectors.toList()));
     }
 

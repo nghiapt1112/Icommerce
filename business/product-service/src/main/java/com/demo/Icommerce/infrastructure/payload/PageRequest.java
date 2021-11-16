@@ -5,14 +5,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Map;
 import java.util.Objects;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class PageRequest extends BaseObject {
+public abstract class PageRequest extends BaseObject {
+    protected Long id;
     protected Integer page;
     protected Integer size;
+    protected StringBuilder queryCondition;
+    protected Map<String, Object> queryParams;
+
 
     public void setPage(Integer page) {
         if (page == null || page <= 0) {
@@ -36,4 +41,6 @@ public class PageRequest extends BaseObject {
         }
         return this.page * this.size;
     }
+
+    public abstract void parseQuery();
 }

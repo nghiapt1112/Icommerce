@@ -14,7 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "CATEGORY")
@@ -35,8 +35,7 @@ public class Category extends BaseEntity {
             fetch = FetchType.LAZY,
             orphanRemoval = true
     )
-//    private Set<Product> product = new LinkedHashSet<>();
-    private List<Product> product;
+    private Set<Product> product;
 
     @Override
     public String toString() {

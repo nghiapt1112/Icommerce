@@ -37,6 +37,9 @@ public class Product extends BaseEntity {
     private String description;
 
     @Column
+    private String colour;
+
+    @Column
     private String branch;
 
     @Column

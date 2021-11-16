@@ -52,7 +52,7 @@ class IcommerceApplicationTests {
 			product.setCategory(category);
 			return product;
 		})
-				.collect(Collectors.toList())
+				.collect(Collectors.toSet())
 		);
 		categoryRepository.save(category);
 	}
