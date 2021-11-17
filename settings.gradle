@@ -1,5 +1,6 @@
 rootProject.name = 'Icommerce'
 
+include(':shared:core');
 include(':business:cart-service');
 include(':business:product-service');
 include(':supporters:discovery-server');

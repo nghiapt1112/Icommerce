@@ -4,7 +4,6 @@ import com.demo.Icommerce.domain.product.entity.Category;
 import com.demo.Icommerce.domain.product.entity.Product;
 import com.demo.Icommerce.domain.product.repository.CategoryRepository;
 import com.demo.Icommerce.domain.product.repository.ProductRepository;
-import com.demo.Icommerce.infrastructure.util.DateTimeUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

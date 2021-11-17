@@ -30,7 +30,7 @@ public class ProductController {
         pageRequest.setPage(0);
         pageRequest.setSize(1);
         pageRequest.setId(id);
-
         return productService.findDetail(pageRequest);
     }
+
 }

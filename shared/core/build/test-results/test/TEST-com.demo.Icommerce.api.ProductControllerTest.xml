@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demo.Icommerce.api.ProductControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-17T08:43:38" hostname="nghiapham-Vostro-3670" time="0.293">
+  <properties/>
+  <testcase name="createUser()" classname="com.demo.Icommerce.api.ProductControllerTest" time="0.293"/>
+  <system-out><![CDATA[15:43:34.394 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:43:34.400 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:43:34.426 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.demo.Icommerce.api.ProductControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:43:34.432 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.demo.Icommerce.api.ProductControllerTest], using SpringBootContextLoader
+15:43:34.435 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.demo.Icommerce.api.ProductControllerTest]: class path resource [com/demo/Icommerce/api/ProductControllerTest-context.xml] does not exist
+15:43:34.436 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.demo.Icommerce.api.ProductControllerTest]: class path resource [com/demo/Icommerce/api/ProductControllerTestContext.groovy] does not exist
+15:43:34.436 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.demo.Icommerce.api.ProductControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:43:34.436 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.demo.Icommerce.api.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:43:34.516 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/mnt/DATA/sources/project_icommerce/Icommerce/business/product-service/build/classes/java/main/com/demo/Icommerce/IcommerceApplication.class]
+15:43:34.517 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.demo.Icommerce.IcommerceApplication for test class com.demo.Icommerce.api.ProductControllerTest
+15:43:34.584 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.demo.Icommerce.api.ProductControllerTest]: using defaults.
+15:43:34.585 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:43:34.595 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2e638dea, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d65e654, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@681a0e04, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56764110, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@64489ae9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@562d8772, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6effc99d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a656b93, org.springframework.test.context.event.EventPublishingTestExecutionListener@2ada27e4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@10f623da, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55b378, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@214d7912, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a539fd8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b1a9fbb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@56792dd3]
+15:43:34.597 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1d5491b2 testClass = ProductControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@5d442b94 testClass = ProductControllerTest, locations = '{}', classes = '{class com.demo.Icommerce.IcommerceApplication}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@47d83570, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@764a5132, [ImportsContextCustomizer@6bb01223 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7ba5b3c6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5e2646c1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7e4c59aa, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@302509cb, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1b1d617d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:43:34.626 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles [test]
+15:43:34.628 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+?[32m :: Spring Boot :: ?[39m              ?[2m (v2.5.6)?[0;39m
+
+?[2m2021-11-17 15:43:34.842?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.api.ProductControllerTest ?[0;39m ?[2m:?[0;39m Starting ProductControllerTest using Java 11.0.10 on nghiapham-Vostro-3670 with PID 43485 (started by nghiapham in /mnt/DATA/sources/project_icommerce/Icommerce/business/product-service)
+?[2m2021-11-17 15:43:34.843?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.api.ProductControllerTest ?[0;39m ?[2m:?[0;39m The following profiles are active: test
+?[2m2021-11-17 15:43:35.467?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[2m2021-11-17 15:43:35.624?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Finished Spring Data repository scanning in 151 ms. Found 2 JPA repository interfaces.
+?[2m2021-11-17 15:43:36.063?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.hibernate.jpa.internal.util.LogHelper ?[0;39m ?[2m:?[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+?[2m2021-11-17 15:43:36.096?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36morg.hibernate.Version                   ?[0;39m ?[2m:?[0;39m HHH000412: Hibernate ORM core version 5.4.32.Final
+?[2m2021-11-17 15:43:36.188?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.hibernate.annotations.common.Version  ?[0;39m ?[2m:?[0;39m HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[2m2021-11-17 15:43:36.256?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Starting...
+?[2m2021-11-17 15:43:36.384?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Start completed.
+?[2m2021-11-17 15:43:36.395?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36morg.hibernate.dialect.Dialect           ?[0;39m ?[2m:?[0;39m HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+?[2m2021-11-17 15:43:36.853?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.h.e.t.j.p.i.JtaPlatformInitiator      ?[0;39m ?[2m:?[0;39m HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[2m2021-11-17 15:43:36.868?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mj.LocalContainerEntityManagerFactoryBean?[0;39m ?[2m:?[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[2m2021-11-17 15:43:37.317?[0;39m ?[33m WARN?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mJpaBaseConfiguration$JpaWebConfiguration?[0;39m ?[2m:?[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[2m2021-11-17 15:43:37.881?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.b.t.m.w.SpringBootMockServletContext?[0;39m ?[2m:?[0;39m Initializing Spring TestDispatcherServlet ''
+?[2m2021-11-17 15:43:37.881?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Initializing Servlet ''
+?[2m2021-11-17 15:43:37.882?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mo.s.t.web.servlet.TestDispatcherServlet ?[0;39m ?[2m:?[0;39m Completed initialization in 1 ms
+?[2m2021-11-17 15:43:38.059?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.api.ProductControllerTest ?[0;39m ?[2m:?[0;39m Started ProductControllerTest in 3.427 seconds (JVM running for 4.214)
+?[2m2021-11-17 15:43:38.157?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.infrastructure.BaseTest   ?[0;39m ?[2m:?[0;39m Find Product List is Executing.
+?[2m2021-11-17 15:43:38.190?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36m[IcommerceLogger]                       ?[0;39m ?[2m:?[0;39m [ProductController] filter: ProductPageRequest(category=null, name=null, branch=branch, color=null, price=null)
+?[2m2021-11-17 15:43:38.190?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36m[IcommerceLogger]                       ?[0;39m ?[2m:?[0;39m [ProductServiceImpl] Finding Products with parames: ProductPageRequest(category=null, name=null, branch=branch, color=null, price=null)
+Hibernate: 
+    select
+        product0_.`id` as id1_1_,
+        product0_.`created_at` as created_2_1_,
+        product0_.`created_by` as created_3_1_,
+        product0_.`deleted` as deleted4_1_,
+        product0_.`updated_at` as updated_5_1_,
+        product0_.`updated_by` as updated_6_1_,
+        product0_.`branch` as branch7_1_,
+        product0_.`category_id` as categor12_1_,
+        product0_.`colour` as colour8_1_,
+        product0_.`description` as descript9_1_,
+        product0_.`name` as name10_1_,
+        product0_.`price` as price11_1_ 
+    from
+        `product` product0_ 
+    where
+        product0_.`deleted`<>1 
+        and (
+            product0_.`branch` like lower(?)
+        ) limit ?
+Hibernate: 
+    select
+        category0_.`id` as id1_0_0_,
+        category0_.`created_at` as created_2_0_0_,
+        category0_.`created_by` as created_3_0_0_,
+        category0_.`deleted` as deleted4_0_0_,
+        category0_.`updated_at` as updated_5_0_0_,
+        category0_.`updated_by` as updated_6_0_0_,
+        category0_.`name` as name7_0_0_ 
+    from
+        `category` category0_ 
+    where
+        category0_.`id`=?
+Hibernate: 
+    select
+        count(product0_.`id`) as col_0_0_ 
+    from
+        `product` product0_ 
+    where
+        product0_.`deleted`<>1 
+        and (
+            product0_.`branch` like lower(?)
+        )
+{"details":[{"productId":1,"name":"Hoddies","description":"Description - 6","price":150.00,"category":"Clothing"},{"productId":2,"name":"Hoddies","description":"Description - 4","price":100.00,"category":"Clothing"},{"productId":3,"name":"Hoddies","description":"Description - 2","price":50.00,"category":"Clothing"},{"productId":4,"name":"Hoddies","description":"Description - 9","price":225.00,"category":"Clothing"},{"productId":5,"name":"Hoddies","description":"Description - 5","price":125.00,"category":"Clothing"},{"productId":6,"name":"Hoddies","description":"Description - 7","price":175.00,"category":"Clothing"},{"productId":7,"name":"Hoddies","description":"Description - 1","price":25.00,"category":"Clothing"},{"productId":8,"name":"Hoddies","description":"Description - 10","price":250.00,"category":"Clothing"},{"productId":9,"name":"Hoddies","description":"Description - 3","price":75.00,"category":"Clothing"},{"productId":10,"name":"Hoddies","description":"Description - 8","price":200.00,"category":"Clothing"}],"page":0,"size":100,"total":1}
+la la la
+?[2m2021-11-17 15:43:38.335?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.infrastructure.BaseTest   ?[0;39m ?[2m:?[0;39m Testcase Find Product List DONE in 0.178 (s)
+?[2m2021-11-17 15:43:38.336?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.infrastructure.BaseTest   ?[0;39m ?[2m:?[0;39m Find Product Detail 1 is Executing.
+?[2m2021-11-17 15:43:38.337?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36m[IcommerceLogger]                       ?[0;39m ?[2m:?[0;39m [ProductController] filter: 1
+Hibernate: 
+    select
+        product0_.`id` as id1_1_,
+        product0_.`created_at` as created_2_1_,
+        product0_.`created_by` as created_3_1_,
+        product0_.`deleted` as deleted4_1_,
+        product0_.`updated_at` as updated_5_1_,
+        product0_.`updated_by` as updated_6_1_,
+        product0_.`branch` as branch7_1_,
+        product0_.`category_id` as categor12_1_,
+        product0_.`colour` as colour8_1_,
+        product0_.`description` as descript9_1_,
+        product0_.`name` as name10_1_,
+        product0_.`price` as price11_1_ 
+    from
+        `product` product0_ 
+    where
+        product0_.`deleted`<>1 
+        and product0_.`id`=? limit ?
+Hibernate: 
+    select
+        category0_.`id` as id1_0_0_,
+        category0_.`created_at` as created_2_0_0_,
+        category0_.`created_by` as created_3_0_0_,
+        category0_.`deleted` as deleted4_0_0_,
+        category0_.`updated_at` as updated_5_0_0_,
+        category0_.`updated_by` as updated_6_0_0_,
+        category0_.`name` as name7_0_0_ 
+    from
+        `category` category0_ 
+    where
+        category0_.`id`=?
+{"productId":1,"name":"Hoddies","description":"Description - 6","price":150.00,"category":"Clothing"}
+la la la
+?[2m2021-11-17 15:43:38.345?[0;39m ?[32m INFO?[0;39m ?[35m43485?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mc.d.Icommerce.infrastructure.BaseTest   ?[0;39m ?[2m:?[0;39m Testcase Find Product Detail 1 DONE in 0.009 (s)
+{
+  "storedVariables" : {
+    "p1" : 1
+  }
+}
+Variables:
+Key: p1, Value: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
