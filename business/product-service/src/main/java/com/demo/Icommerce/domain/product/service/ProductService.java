@@ -7,5 +7,5 @@ import com.demo.Icommerce.domain.product.payload.ProductResponse;
 public interface ProductService {
     ProductPageResponse find(ProductPageRequest pageRequest);
 
-    ProductResponse findDetail(Long id);
+    ProductResponse findDetail(ProductPageRequest pageRequest);
 }

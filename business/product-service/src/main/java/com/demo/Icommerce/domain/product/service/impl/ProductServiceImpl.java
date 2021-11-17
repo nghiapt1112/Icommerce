@@ -30,12 +30,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductResponse findDetail(Long id) {
-        ProductPageRequest pageRequest = new ProductPageRequest();
-        pageRequest.setPage(0);
-        pageRequest.setSize(1);
-        pageRequest.setId(id);
-        
+    public ProductResponse findDetail(ProductPageRequest pageRequest) {
         List<Product> res = productRepository.find(pageRequest);
         if (CollectionUtils.isEmpty(res)) {
             throw new RuntimeException("Khong tim thay Product");

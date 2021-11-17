@@ -1,8 +1,8 @@
 package com.demo.Icommerce.infrastructure.payload;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Map;
@@ -10,12 +10,14 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@JsonIgnoreProperties({"queryCondition", "queryParams"})
 public abstract class PageRequest extends BaseObject {
     protected Long id;
     protected Integer page;
     protected Integer size;
+    @JsonIgnore
     protected StringBuilder queryCondition;
+    @JsonIgnore
     protected Map<String, Object> queryParams;
 
 
@@ -25,10 +27,6 @@ public abstract class PageRequest extends BaseObject {
         } else {
             this.page = page - 1;
         }
-    }
-
-    public org.springframework.data.domain.PageRequest toPageRequest() {
-        return org.springframework.data.domain.PageRequest.of(page, size);
     }
 
     @JsonIgnore

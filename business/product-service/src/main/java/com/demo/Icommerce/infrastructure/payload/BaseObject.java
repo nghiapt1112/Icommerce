@@ -1,4 +1,4 @@
 package com.demo.Icommerce.infrastructure.payload;
 
-public class BaseObject {
+public abstract class BaseObject {
 }
