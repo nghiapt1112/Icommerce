@@ -3,7 +3,7 @@
 
 spring:
   application:
-    name: product-service
+    name: gateway-service
   cloud:
     consul:
       host: localhost

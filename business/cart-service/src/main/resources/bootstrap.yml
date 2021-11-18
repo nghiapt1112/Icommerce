@@ -14,7 +14,7 @@ spring:
         fail-fast: false
         enabled: false
       discovery:
-        instance-id: ${spring.application.name}:${random.value}
+        instance-id: product-service
         healthCheckInterval: 20s
         healthCheckPath: /actuator/health
         health-check-critical-timeout: 1m

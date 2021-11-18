@@ -15,6 +15,21 @@ services:
     environment:
       CONSUL_LOCAL_CONFIG: '{"leave_on_terminate": true}'
     command: agent -dev -client=0.0.0.0
-    
     ports:
       - 8502:8500
+############### MySQL DEV ###############
+  mysqlv8:
+    image: mysql:8
+    mem_limit: 4098m
+    mem_reservation: 1024M
+    cpus: 1
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    command: --default-authentication-plugin=mysql_native_password --lower_case_table_names=1
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
