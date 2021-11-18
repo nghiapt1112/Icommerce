@@ -1,6 +1,6 @@
 rootProject.name = 'Icommerce'
 
-include(':business:cart-service', ':business:product-service', ':supporters:discovery-server', ':supporters:api-gateway');
+include('supporters:core',':business:cart-service', ':business:product-service', ':supporters:discovery-server', ':supporters:api-gateway');
 
 
 

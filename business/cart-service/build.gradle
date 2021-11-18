@@ -26,6 +26,7 @@ configurations {
 }
 
 dependencies {
+	implementation project(':supporters:core')
 	implementation (
 			'org.springframework.cloud:spring-cloud-starter-bootstrap',
 			'org.springframework.cloud:spring-cloud-starter-consul-all',
