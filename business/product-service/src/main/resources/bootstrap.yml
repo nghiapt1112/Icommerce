@@ -2,8 +2,8 @@ spring.cloud.consul.config.enabled: false
 spring.cloud.consul.config.import-check.enabled: false
 
 spring:
-  config:
-    import: 'optional:consul:'
+#  config:
+#    import: "optional:consul:"
   application:
     name: product-service
   cloud:
@@ -15,7 +15,7 @@ spring:
         format: PROPERTIES
         data-key: data
         fail-fast: false
-        enabled: true
+        enabled: false
       discovery:
         instance-id: product-service
         healthCheckInterval: 20s
