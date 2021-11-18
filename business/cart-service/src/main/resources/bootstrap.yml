@@ -3,7 +3,7 @@
 
 spring:
   application:
-    name: product-service
+    name: cart-service
   cloud:
     consul:
       host: localhost
@@ -14,7 +14,7 @@ spring:
         fail-fast: false
         enabled: false
       discovery:
-        instance-id: product-service
+        instance-id: ${spring.application.name}:${random.value}
         healthCheckInterval: 20s
         healthCheckPath: /actuator/health
         health-check-critical-timeout: 1m

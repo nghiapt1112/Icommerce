@@ -25,7 +25,7 @@ public class ProductController {
 
     @GetMapping("/find/{id}")
     public ProductResponse findDetail(@PathVariable Long id) {
-        IcommerceLogger.logger.info("[ProductController] filter: " + id);
+        IcommerceLogger.logger.info("[ProductController] find detail: " + id);
         ProductPageRequest pageRequest = new ProductPageRequest();
         pageRequest.setPage(0);
         pageRequest.setSize(1);

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class BaseController {
     @ExceptionHandler(Exception.class)
     public void handleRootException(BaseException exception) {
-
+        // TODO: implement custom exceptionHandler
     }
 
     @InitBinder
