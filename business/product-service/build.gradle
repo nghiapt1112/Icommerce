@@ -11,6 +11,9 @@ sourceCompatibility = '11'
 repositories {
 	mavenCentral()
 }
+ext {
+	set('springCloudVersion', "2020.0.4")
+}
 
 configurations {
 	developmentOnly
@@ -23,14 +26,21 @@ configurations {
 }
 
 dependencies {
-	implementation project(':shared:core');
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'io.springfox:springfox-swagger2:3.0.0'
-	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+//	compile project(':core')
+	implementation ('org.springframework.boot:spring-boot-starter-web',
+			'org.springframework.boot:spring-boot-starter-data-jpa',
+			'io.springfox:springfox-swagger2:3.0.0',
+			'io.springfox:springfox-swagger-ui:2.9.2'
+	)
+
+//	implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+	implementation (
+			'org.springframework.cloud:spring-cloud-starter-consul-all',
+			'org.springframework.cloud:spring-cloud-starter-consul-config'
+	)
 
 //	implementation 'org.flywaydb:flyway-core'
-	runtimeOnly 'mysql:mysql-connector-java'
+	runtimeOnly ('mysql:mysql-connector-java')
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	compileOnly 'org.projectlombok:lombok'
@@ -50,6 +60,12 @@ test {
 	useJUnitPlatform()
 }
 
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
 
 bootRun {
 	systemProperties = System.properties

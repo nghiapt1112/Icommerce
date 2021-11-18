@@ -1,0 +1,28 @@
+spring.cloud.consul.config.enabled: false
+spring.cloud.consul.config.import-check.enabled: false
+
+spring:
+  config:
+    import: 'optional:consul:'
+  application:
+    name: product-service
+  cloud:
+    consul:
+#      enabled: true
+      host: localhost
+      port: 8502
+      config:
+        format: PROPERTIES
+        data-key: data
+        fail-fast: false
+        enabled: true
+      discovery:
+        instance-id: product-service
+        healthCheckInterval: 20s
+        healthCheckPath: /actuator/health
+        health-check-critical-timeout: 1m
+        prefer-ip-address: true
+
+    loadbalancer:
+      ribbon:
+        enabled: false
