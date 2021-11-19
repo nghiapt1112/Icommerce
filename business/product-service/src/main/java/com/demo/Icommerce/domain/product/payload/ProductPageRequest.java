@@ -44,7 +44,7 @@ public class ProductPageRequest extends PageRequest {
             params.put("branch", "%" + this.getBranch() + "%");
         }
         if (StringUtils.hasText(this.getColor())) {
-            condition.append(" AND p.color = :color");
+            condition.append(" AND p.colour = :color");
             params.put("color", this.getColor());
         }
         if (Objects.nonNull(this.getPrice())) {

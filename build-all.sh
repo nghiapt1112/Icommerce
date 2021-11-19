@@ -19,6 +19,10 @@ note "Copying artifact file of cart service ...."
 cp ./business/cart-service/build/libs/cart-service-0.0.1-SNAPSHOT.jar ./deployment/
 note "DONE...."
 
+note "Copying artifact file of gateway service ...."
+cp ./supporters/api-gateway/build/libs/api-gateway-0.0.1-SNAPSHOT.jar ./deployment/
+note "DONE...."
+
 note "building docker images...."
 docker-compose build
 note "DONE...."
