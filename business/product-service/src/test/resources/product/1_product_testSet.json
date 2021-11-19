@@ -13,26 +13,26 @@
             {
               "productId": 7,
               "name": "Hoddies",
-              "description": "Description - 1",
-              "category": "Clothing"
+              "description": "Description - 3"
             },
             {
               "productId": 5,
-              "description": "Description - 5",
-              "category": "Clothing"
-            },
-            {
-              "productId": 1,
               "description": "Description - 6",
               "category": "Clothing"
             },
             {
-              "productId": 2,
-              "description": "Description - 4",
+              "productId": 1,
+              "description": "Description - 8",
               "category": "Clothing"
             },
             {
-              "productId": "$p1"
+              "productId": 2,
+              "description": "Description - 10",
+              "category": "Clothing"
+            },
+            {
+              "productId": "$p1",
+              "description": "$description1"
             },
             {
               "productId": 4
@@ -66,8 +66,7 @@
         "res": {
           "productId": 1,
           "name": "Hoddies",
-          "description": "Description - 6",
-          "price": 150.00,
+          "description": "#description1",
           "category": "Clothing"
         }
       }
